@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from skimage.metrics import structural_similarity, mean_squared_error
 import copy
 
-image = cv2.imread('hw2/sar_1.jpg')
+image = cv2.imread('sar_1.jpg')
 image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) 
 
 # plt.imshow(image_gray, cmap="gray")
@@ -29,6 +29,8 @@ bg_image = np.ones(image_gray.shape, np.uint8) * 128
 
 bg_image[zeros_pixel] = 0
 bg_image[ones_pixel] = 255
+
+
 
 # plt.imshow(bg_image, cmap="gray")
 
